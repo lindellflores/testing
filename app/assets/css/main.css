@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+--color-border: var(--border);
+--color-input: var(--input);
+--color-ring: var(--ring);
+--color-background: var(--background);
+--color-foreground: var(--foreground);
+
+--color-primary: var(--primary);
+--color-primary-foreground: var(--primary-foreground);
+--color-secondary: var(--secondary);
+--color-secondary-foreground: var(--secondary-foreground);
+--color-destructive: var(--destructive);
+--color-destructive-foreground: var(--destructive-foreground);
+--color-muted: var(--muted);
+--color-muted-foreground: var(--muted-foreground);
+--color-accent: var(--accent);
+--color-accent-foreground: var(--accent-foreground);
+--color-popover: var(--popover);
+--color-popover-foreground: var(--popover-foreground);
+--color-card: var(--card);
+--color-card-foreground: var(--card-foreground);
+--color-success: var(--success);
+--color-success-foreground: var(--success-foreground);
+--color-warning: var(--warning);
+--color-warning-foreground: var(--warning-foreground);
+
+/* Typography */
+--font-display: 'Sora', 'IBM Plex Sans', sans-serif;
+--font-sans: 'IBM Plex Sans', sans-serif;
+--font-mono: 'IBM Plex Mono', monospace;
+
+/* Radius */
+--radius-lg: var(--radius);
+--radius-md: calc(var(--radius) - 2px);
+--radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+:root {
+
+/* --- Foundation (input bg & Text) --- */
+--background: #FDFBFD;
+--foreground: #24162A;
+
+/* --- Cards & Popovers --- */
+--card: #F9F6F9;
+--card-foreground: #24162A;
+--popover: #F9F6F9;
+--popover-foreground: #24162A;
+
+/* --- Core Actions (Brand) --- */
+--primary: #4A154B;
+--primary-foreground: #FFFFFF;
+--secondary: #F5EEF5;
+--secondary-foreground: #24162A;
+--muted: #F5EEF5;
+--muted-foreground: #6E6178;
+--accent: #F1E6F0;
+--accent-foreground: #4A154B;
+
+/* --- Borders & Inputs --- */
+--border: #E7DEE6;
+--input: #DCD0DA;
+--ring: #4A154B;
+
+/* --- Status Tokens --- */
+--warning: #A5651D;
+--warning-foreground: #FFFFFF;
+--destructive: #9B3B62;
+--success: #2F6B54;
+
+--radius: 0.5rem;
+}
+
+.dark {
+--background: #1C1220;
+--foreground: #F5EEF5;
+--card: #241729;
+--card-foreground: #F5EEF5;
+--popover: #241729;
+--popover-foreground: #F5EEF5;
+
+--primary: #B06BAE;
+--primary-foreground: #1A0F1C;
+--secondary: #2E2033;
+--secondary-foreground: #F5EEF5;
+--muted: #2E2033;
+--muted-foreground: #A79AA8;
+--accent: #34222F;
+--accent-foreground: #F1D8EC;
+
+--border: #362839;
+--input: #362839;
+--ring: #B06BAE;
+
+--warning: #E29236;
+--warning-foreground: #241100;
+--destructive: #CC668F;
+--success: #4DB391;
+}
+
+* {
+    @apply border-border;
+}
+
+body {
+    @apply bg-muted text-foreground font-sans text-[15px] leading-relaxed antialiased transition-colors duration-300;
+}
+}
