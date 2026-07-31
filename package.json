@@ -9,8 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --cache --cache-strategy content --max-warnings 0",
-    "lint:fix": "pnpm lint --fix",
-    "typecheck": "nuxt typecheck"
+    "lint:fix": "pnpm lint --fix"
 
   },
   "dependencies": {
